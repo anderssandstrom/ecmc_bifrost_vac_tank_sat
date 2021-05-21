@@ -1,9 +1,12 @@
-#!/b# 
+#!/bin/bash# 
 # Scale and offset data accquired 21/5-21
 #
 # Arg 1 Optional file name, otherwise stdin
 #
 # Return Complete camonitor lines scaled (with PV name and timestamp).
+#
+# Example:
+# cat posital_issue.log | bash scaledata.bash 
 #
 # Author: Anders Sandström, anders.sandstrom@esss.se
 #
@@ -26,9 +29,11 @@ fi
 OPENLOOPPV="Axis1"
 SSIPV="EL5002"
 
-DATA_OPEN=$(cat ${FILE} | grep ${OPENLOOPPV} | awk -v CONVFMT=%.17g -v scale=8.0763E-5 -v offset=0 '{$NF*=scale;$NF+=offset; print $0}')
+DATA_RAW=$(cat ${FILE})
 
-DATA_SSI=$(cat ${FILE} | grep ${SSIPV} | awk -v CONVFMT=%.17g -v scale=4.4364E-5 -v offset=35.6531239856403 '{$NF*=scale;$NF+=offset; print $0}')
+DATA_OPEN=$(echo "${DATA_RAW} " | grep ${OPENLOOPPV} | awk -v CONVFMT=%.17g -v scale=8.0763E-5 -v offset=0 '{$NF*=scale;$NF+=offset; print $0}')
 
-echo "${DATA_OPEN} ${DATA_SSI}"
+DATA_SSI=$(echo "${DATA_RAW} " | grep ${SSIPV} | awk -v CONVFMT=%.17g -v scale=-4.4364E-5 -v offset=35.6531239856403 '{$NF*=scale;$NF+=offset; print $0}')
 
+echo "${DATA_OPEN} "
+echo "${DATA_SSI} "
