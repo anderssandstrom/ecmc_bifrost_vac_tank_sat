@@ -1,0 +1,21 @@
+#!/bin/bash
+# Scale open loop counter
+
+
+$ cat ../switchtest/data/posital_issue.log | grep Axis1 | bash ecmcScaleOffsetLines.bash 8.0763E-5 0 | tee ../switchtest/data/posital_issue_OC_scaled.log
+
+# Scale posital
+$ cat ../switchtest/data/posital_issue.log | grep EL5002 | bash ecmcScaleOffsetLines.bash -4.4364E-5 35.6531239856403 | tee ../switchtest/data/posital_issue_SSI_scaled.log
+
+# plot
+cat ../switchtest/data/posital_issue_* | python ~/sources/ecmccomgui/pyDataManip/plotCaMonitor.py
+cat ../switchtest/data/posital_issue_OC_scaled.log ../switchtest/data/posital_issue_SSI_scaled.log | python ~/sources/ecmccomgui/pyDataManip/plotCaMonitor.py &
+
+
+
+# Delin
+cat ../switchtest/data/posital_issue_SSI_scaled.log | python ~/sources/ecmccomgui/pyDataManip/deLin.py | tee ../switchtest/data/posital_issue_SSI_scaled_deLin.log
+cat ../switchtest/data/posital_issue_OC_scaled.log | python ~/sources/ecmccomgui/pyDataManip/deLin.py | tee ../switchtest/data/posital_issue_OC_scaled_deLin.log
+
+# plot
+cat ../switchtest/data/posital_issue_*_deLin* | python ~/sources/ecmccomgui/pyDataManip/plotCaMonitor.py & 

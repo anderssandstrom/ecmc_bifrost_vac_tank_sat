@@ -1,5 +1,9 @@
 Zeroposition of openloop counter at SAM zero (803488 on posital). This is outside the range. Posital is negative scaled.
 
+Would have been safer to implement the anti collision switch in another way..
+
+
+
 Kill switch low test:
 
 Engage
