@@ -29,5 +29,9 @@ High speed 01.deg/s  => 1280motor degs/s
 Start at same 0 as we had yesterday (we stopped IOC at 0 position and started IOC at same place!)
 
 Collision with concrete when appaching forward hard stop. Lost steps and 0 position
-resulted in 3300.0609 motor degree offset of open loop counter (new zero according to poistal is 33001.0609, for open loop counter) This happend for the last test of.
+resulted in 3300.0609 motor degree offset of open loop counter (new zero according to poistal is 33001.0609, for open loop counter) This happend for the last test of accuracy.
 
+
+Switchabs after collision so needs to be compared to thgose values.. AFTER 3300 offset
+
+Also high speed
