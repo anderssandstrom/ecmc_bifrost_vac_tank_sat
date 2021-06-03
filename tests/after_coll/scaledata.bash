@@ -31,13 +31,13 @@ SSIPV="EL5002"
 
 DATA_RAW=$(cat ${FILE})
 
-DATA_OPEN=$(echo "${DATA_RAW} " | grep ${OPENLOOPPV} | awk -v CONVFMT=%.17g -v scale=8.10165E-5 -v offset=-3300.0609 '{$NF*=scale;$NF+=offset*scale; print $0}')
+DATA_OPEN=$(echo "${DATA_RAW} " | grep ${OPENLOOPPV} | awk -v CONVFMT=%.17g -v scale=8.08801E-5 -v offset=-3300.0609 '{$NF+=offset;$NF*=scale; print $0}')
 
 # Check for overflow of SSI encoder (if value is > 1E9 then treat as minus))
 DATA_SSI=$(echo "${DATA_RAW} " | grep ${SSIPV} | awk -v CONVFMT=%.17g '{if($NF>1E9){$NF=$NF-2147483648}; print $0}')
 
 # Scale
-DATA_SSI=$(echo "${DATA_SSI} " | grep ${SSIPV} | awk -v CONVFMT=%.17g -v scale=-4.4364E-5 -v offset=30.632587812 '{$NF*=scale;$NF+=offset; print $0}')
+DATA_SSI=$(echo "${DATA_SSI} " | grep ${SSIPV} | awk -v CONVFMT=%.17g -v scale=-4.45114E-5 -v offset=-690483 '{$NF+=offset;$NF*=scale; print $0}')
 
 # Output data
 echo "${DATA_OPEN} "
