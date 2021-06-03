@@ -26,18 +26,23 @@ if [ "$ARGOK" -ne 1 ]; then
   exit 1  
 fi
 
+
 OPENLOOPPV="Axis1"
 SSIPV="EL5002"
 
 DATA_RAW=$(cat ${FILE})
 
-DATA_OPEN=$(echo "${DATA_RAW} " | grep ${OPENLOOPPV} | awk -v CONVFMT=%.17g -v scale=8.08801E-5 -v offset=-3300.0609 '{$NF+=offset;$NF*=scale; print $0}')
+# (ecmccomgui_py36) [vagrant@localhost calibration]$ python scannerToOpenloop.py 
+# [ 8.10046933e-05 -2.79250575e-01]
+DATA_OPEN=$(echo "${DATA_RAW} " | grep ${OPENLOOPPV} | awk -v CONVFMT=%.17g -v scale=8.10046933e-05 -v offset=-2.79250575e-01 '{$NF*=scale;$NF+=offset; print $0}')
 
 # Check for overflow of SSI encoder (if value is > 1E9 then treat as minus))
 DATA_SSI=$(echo "${DATA_RAW} " | grep ${SSIPV} | awk -v CONVFMT=%.17g '{if($NF>1E9){$NF=$NF-2147483648}; print $0}')
 
+# ecmccomgui_py36) [vagrant@localhost calibration]$ python scannerToPosital.py 
+# [-4.45181345e-05  3.07399459e+01]
 # Scale
-DATA_SSI=$(echo "${DATA_SSI} " | grep ${SSIPV} | awk -v CONVFMT=%.17g -v scale=-4.45114E-5 -v offset=-690483 '{$NF+=offset;$NF*=scale; print $0}')
+DATA_SSI=$(echo "${DATA_SSI} " | grep ${SSIPV} | awk -v CONVFMT=%.17g -v scale=-4.45181345e-05 -v offset=3.07399459e+01 '{$NF*=scale;$NF+=offset; print $0}')
 
 # Output data
 echo "${DATA_OPEN} "
