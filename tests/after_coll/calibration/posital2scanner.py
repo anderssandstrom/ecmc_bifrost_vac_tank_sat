@@ -13,21 +13,23 @@ def main():
 # 435310.8609,  34.9801
 # 558742.5281,  44.989
 
-  x = np.array([802915,
+# Encoder
+  enc = np.array([802915,
                 690483,
                 578788,
                 466368,
                 -95160,
                 -320116])
 
-  y = np.array([-5.0017,
+# Laser scanner
+  ref = np.array([-5.0017,
                  0,
                  4.9725,
                  9.9755,
                  34.980,
                  44.989])
            
-  z = np.polyfit(x, y, 1)
+  z = np.polyfit(enc, ref, 1)
 
   print(z)
   
