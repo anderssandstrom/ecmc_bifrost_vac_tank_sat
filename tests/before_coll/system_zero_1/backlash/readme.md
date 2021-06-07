@@ -9,3 +9,7 @@ Use the follwoing files for scale:
 2. scaledata_back.bash for backlash_back.log
 
 NOTE: The two scaling function only have different offsets so that motion is initiated with 0 error between openloop counter and posital encoder. This to make the backlash more visible.
+
+Example for plot data:
+cat backlash_back.log | bash scaledata_back.bash | python ~/sources/ecmccomgui/pyDataManip/plotCaMonitor.py 
+
