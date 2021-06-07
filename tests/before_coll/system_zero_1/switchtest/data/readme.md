@@ -1,4 +1,15 @@
+# Switch tests
 Zeroposition of openloop counter at SAM zero (803488 on posital). This is outside the range. Posital is negative scaled.
+This is not the correct Bifrost 0deg (only cad model 0).
+
+Need to rescale based on posital encoder values for system_zero_2 tests to get approx correct values.
+
+
+
+
+
+# Obsolete data below
+
 
 Kill switch low test:
 
