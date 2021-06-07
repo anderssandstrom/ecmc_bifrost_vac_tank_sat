@@ -1,0 +1,61 @@
+# Low hard stop
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat lowhardstop.log | bash ../scaledata.bash | tee eng_units/45deg.log
+IOC_TEST:Axis1-PosAct 2021-06-02 10:06:46.028655 -10.978210375023574 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:06:48.708653 -10.974417235955201 
+
+
+# -5deg
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat m5deg.log | bash ../scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:11:13.668641 -5.0096773753587343 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:12:13.478645 -5.0102009745677947 
+
+# 0deg
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat 0deg.log | bash ../scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:14:38.658639 -0.0081487286875825005 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:14:38.428639 -0.011748598034998281
+
+# 5deg
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat 5deg.log | bash ../scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:22:41.698638 4.9933787789488511 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:22:48.638642 4.9956060588578026 
+
+# 10deg
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat 10deg.log | bash ../scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:30:25.398639 9.9949074254174004 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:30:49.628637 9.9986431097760011 
+
+# 15deg
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat 15deg.log | bash ../scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:36:15.488650 14.9964355029764 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:36:22.858636 15.001591137890602 
+
+# 20deg
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat 20deg.log | bash ../scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:39:02.968645 19.997963580535398 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:39:01.658633 19.997906967136998 
+
+# 25deg
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat 25deg.log | bash ../scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:41:14.868647 24.999491658094396 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:41:16.398640 24.997071526098601 
+
+# 30deg
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat 30deg.log | bash ../scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:43:22.028635 30.001019735653394 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:43:21.588642 29.995123300015202 
+
+# 35deg
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat 35deg.log | bash ../scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:45:18.398638 35.002548380501118 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:45:38.118639 34.997359145700997 
+
+# 40deg
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat 40deg.log | bash ../scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:47:41.918640 40.004076458060112 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:47:53.888639 40.004891848200998 
+
+# 45deg
+(ecmccomgui_py36) [dev@mcag-trgt-muts-log accuracy]$ cat 45deg.log | bash ../scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:49:47.078663 45.005604535619113 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:49:46.348647 45.0113562770578 
+
