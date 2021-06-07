@@ -39,10 +39,9 @@ DATA_OPEN=$(echo "${DATA_RAW} " | grep ${OPENLOOPPV} | awk -v CONVFMT=%.17g -v s
 # Check for overflow of SSI encoder (if value is > 1E9 then treat as minus))
 DATA_SSI=$(echo "${DATA_RAW} " | grep ${SSIPV} | awk -v CONVFMT=%.17g '{if($NF>1E9){$NF=$NF-2147483648}; print $0}')
 
-# ecmccomgui_py36) [vagrant@localhost calibration]$ python scannerToPosital.py 
-# [-4.45181345e-05  3.07399459e+01]
-# Scale
-DATA_SSI=$(echo "${DATA_SSI} " | grep ${SSIPV} | awk -v CONVFMT=%.17g -v scale=-4.45181345e-05 -v offset=3.07399459e+01 '{$NF*=scale;$NF+=offset; print $0}')
+#ecmccomgui_py36) [dev@mcag-trgt-muts-log calibration]$ python posital2scanner.py 
+#[-4.45114018e-05  3.07267127e+01]
+DATA_SSI=$(echo "${DATA_SSI} " | grep ${SSIPV} | awk -v CONVFMT=%.17g -v scale=-4.45114018e-05 -v offset=3.07267127e+01 '{$NF*=scale;$NF+=offset; print $0}')
 
 # Output data
 echo "${DATA_OPEN} "
