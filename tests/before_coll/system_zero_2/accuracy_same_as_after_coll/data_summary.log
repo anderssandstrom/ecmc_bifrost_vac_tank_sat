@@ -1,0 +1,21 @@
+(ecmccomgui_py36) [vagrant@localhost accuracy_same_as_after_coll]$ cat m5deg,log | bash scaledata,bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:11:13,668641 -5,018774697242864 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:12:13,478645 -5,020236281172803 
+
+
+(ecmccomgui_py36) [vagrant@localhost accuracy_same_as_after_coll]$ cat 5deg,log | bash scaledata,bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:22:41,698638 4,986587962913668 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:22:48,638642 4,9877635982127977 
+
+(ecmccomgui_py36) [vagrant@localhost accuracy_same_as_after_coll]$ cat 10deg,log | bash scaledata,bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:30:25,398639 9,989269862437963 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:30:49,628637 9,9918971013759972 
+
+(ecmccomgui_py36) [vagrant@localhost accuracy_same_as_after_coll]$ cat 35deg,log | bash scaledata,bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:45:18,398638 35,002677082275319 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:45:38,118639 34,996091789175999 
+
+(ecmccomgui_py36) [vagrant@localhost accuracy_same_as_after_coll]$ cat 45deg,log | bash scaledata,bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 10:49:47,078663 45,008039743242449 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 10:49:46,348647 45,012283561412801 
+
