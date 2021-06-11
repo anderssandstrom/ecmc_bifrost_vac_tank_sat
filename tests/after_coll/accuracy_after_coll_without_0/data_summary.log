@@ -1,0 +1,23 @@
+pi@raspberrypi:~/sources/ecmc_bifrost_vac_tank_sat/tests/after_coll/accuracy_after_coll_without_0 $ cat m5deg.log | bash scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 12:32:43.858670 -5.0163597009674294 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 12:32:52.678648 -5.003929681557004
+
+pi@raspberrypi:~/sources/ecmc_bifrost_vac_tank_sat/tests/after_coll/accuracy_after_coll_without_0 $ cat 0_again.log | bash scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 12:27:28.378641 -0.016484318293059685 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 12:27:51.718641 0.0012861412686007156 
+
+pi@raspberrypi:~/sources/ecmc_bifrost_vac_tank_sat/tests/after_coll/accuracy_after_coll_without_0 $ cat 5deg_afterColl_3300offset.log | bash scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 11:46:17.278674 4.9833796713167731 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 11:46:28.638645 4.9736924075495992 
+
+pi@raspberrypi:~/sources/ecmc_bifrost_vac_tank_sat/tests/after_coll/accuracy_after_coll_without_0 $ cat 10deg_afterColl_3300offset.log | bash scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 11:49:49.728641 9.9832550552063584 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 11:49:59.638650 9.9783740177856011 
+
+pi@raspberrypi:~/sources/ecmc_bifrost_vac_tank_sat/tests/after_coll/accuracy_after_coll_without_0 $ cat 35deg_afterColl_3300offset.log | bash scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 12:02:48.168642 34.982637090717901 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 12:02:57.968709 34.976317935528002 
+
+pi@raspberrypi:~/sources/ecmc_bifrost_vac_tank_sat/tests/after_coll/accuracy_after_coll_without_0 $ cat 45deg_afterColl_3300offset.log | bash scaledata.bash 
+IOC_TEST:Axis1-PosAct 2021-06-02 12:10:49.388644 44.982387856876777 
+IOC_TEST:ec0-s3-EL5002-CH1-PosAct 2021-06-02 12:10:53.128639 44.990845211032806
